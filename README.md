@@ -1,5 +1,5 @@
 # utl_optlen
-Reduce the size of numeric and characyer variiable to the max observed in the data
+Reduce the size of numeric and character variables to the max observed in the data
 
     ```  SAS Forum: output from iteration or reduce length of numeric and character to max observed              ```
     ```                                                                                                          ```
