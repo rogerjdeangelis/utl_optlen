@@ -1,5 +1,6 @@
 # utl_optlen
 SAS reduce or shrink the size of numeric and character SAS variables to the max observed in the data
+optimum lengths for SAS variables
 
     ```  Reduce the size of numeric and character variables to the max observed in the data              ```
     ```                                                                                                          ```
