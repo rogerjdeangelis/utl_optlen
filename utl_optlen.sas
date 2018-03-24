@@ -1,5 +1,5 @@
 
-%macro`utl_optlen(
+%macro utl_optlen(
        inp=          /* input dataset  */
       ,out=          /* output dataset */
       ,compress=binary   /* output compression */
@@ -75,17 +75,17 @@
            * Rick Langston first proposed this;
            %if &num ne 0 %then %do;
 
-             do i=1 to dim(num);
+             do __i=1 to dim(num);
 
                 if missing(num[i]) then len=3;
                 else do;
-                  if num[i] ne trunc( num[i], 7 ) then len = 8 ; else
-                  if num[i] ne trunc( num[i], 6 ) then len = 7 ; else
-                  if num[i] ne trunc( num[i], 5 ) then len = 6 ; else
-                  if num[i] ne trunc( num[i], 4 ) then len = 5 ; else
-                  if num[i] ne trunc( num[i], 3 ) then len = 4 ; else len=3;
+                  if num[__ii] ne trunc( num[__ii], 7 ) then len = 8 ; else
+                  if num[__ii] ne trunc( num[__ii], 6 ) then len = 7 ; else
+                  if num[__ii] ne trunc( num[__ii], 5 ) then len = 6 ; else
+                  if num[__ii] ne trunc( num[__ii], 4 ) then len = 5 ; else
+                  if num[__ii] ne trunc( num[__ii], 3 ) then len = 4 ; else len=3;
                 end;
-                if len > lennum[i] then lennum[i]=len;
+                if len > lennum[__ii] then lennum[__ii]=len;
 
               end;
            %end;
